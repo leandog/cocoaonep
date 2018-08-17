@@ -8,8 +8,8 @@
 #import "EXORpcResource.h"
 
 /**
- Create a clone from an existing One Platform resource given its RID or a non-activated sharecode for that resource. 
- 
+ Create a clone from an existing One Platform resource given its RID or a non-activated sharecode for that resource.
+
  The resource to clone must be a client
  */
 @interface EXORpcCloneResource : EXORpcResource
@@ -36,10 +36,10 @@
 
 /**
  Create a clone resource for a RID
- 
+
  @param rid The Resource Id to be cloned
  @param noaliases Whether to clone the aliases
- @param nohistory Whether to clone the historical data
+ @param nohistorical Whether to clone the historical data
  @return The clone resource
  */
 + (EXORpcCloneResource*)cloneWithRid:(EXORpcResourceID*)rid noaliases:(BOOL)noaliases nohistorical:(BOOL)nohistorical;
@@ -49,7 +49,7 @@
 
  @param code The share code to be cloned
  @param noaliases Whether to clone the aliases
- @param nohistory Whether to clone the historical data
+ @param nohistorical Whether to clone the historical data
  @return The clone resource
  */
 + (EXORpcCloneResource*)cloneWithCode:(NSString*)code noaliases:(BOOL)noaliases nohistorical:(BOOL)nohistorical;
@@ -59,7 +59,7 @@
 
  @param rid The Resource Id to be cloned
  @param noaliases Whether to clone the aliases
- @param nohistory Whether to clone the historical data
+ @param nohistorical Whether to clone the historical data
  @return The clone resource
  */
 - (instancetype)initWithRid:(EXORpcResourceID*)rid noaliases:(BOOL)noaliases nohistorical:(BOOL)nohistorical;
@@ -69,7 +69,7 @@
 
  @param code The share code to be cloned
  @param noaliases Whether to clone the aliases
- @param nohistory Whether to clone the historical data
+ @param nohistorical Whether to clone the historical data
  @return The clone resource
  */
 - (instancetype)initWithCode:(NSString*)code noaliases:(BOOL)noaliases nohistorical:(BOOL)nohistorical;

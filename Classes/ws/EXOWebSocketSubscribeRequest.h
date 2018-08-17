@@ -35,7 +35,7 @@ typedef void(^EXOWebSocketSubscribedValue)(EXORpcValue * __nullable value, NSErr
  Create a subscribe request to an RID.
 
  @param rid The reasource to subscribe to
- @param complete The callback to call when a new value is available
+ @param update The callback to call when a new value is available
 
  @return The subscribe request
  */

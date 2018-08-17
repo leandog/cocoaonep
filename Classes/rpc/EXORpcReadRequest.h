@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Read Selection downsampling type.
- 
+
  @note Note that these options provide a blind sampling function, not averaging or other type of rollup calculation.
  */
 typedef NS_ENUM(NSInteger, EXORpcReadSelectionType) {
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, EXORpcReadSelectionType) {
 
 /**
  Callback for completed read
- 
+
  @param results If successful, an array of EXORpcValues, otherwise nil
  @param error If successful, is nil, otherwise the error.
  */
@@ -35,7 +35,7 @@ typedef void(^EXORpcReadRequestComplete)(NSArray<EXORpcValue *> * __nullable res
 
 /**
  The timestamp to start reading values from
- 
+
  This should always be older than endtime. (or nil)
  */
 @property(nonatomic,strong,readonly,nullable) NSDate *starttime;
@@ -69,7 +69,7 @@ typedef void(^EXORpcReadRequestComplete)(NSArray<EXORpcValue *> * __nullable res
 
 /**
  Read the most recent value from the given RID.
- 
+
  @param rid Dataport to read
  @param complete The callback when complete.
  @return The Read Request
@@ -80,7 +80,7 @@ typedef void(^EXORpcReadRequestComplete)(NSArray<EXORpcValue *> * __nullable res
  Read values from the given RID.
 
  @param rid Dataport to read.
- @param startime The timestamp to start reading values from.
+ @param starttime The timestamp to start reading values from.
  @param endtime The timestamp to stop reading values from.
  @param ascending Consider the data values in ascending or decending order before applying selection or limits.
  @param limit Maximum number of values to return.
@@ -103,11 +103,11 @@ typedef void(^EXORpcReadRequestComplete)(NSArray<EXORpcValue *> * __nullable res
  Read values from the given RID.
 
  @param rid Dataport to read.
- @param startime The timestamp to start reading values from.
+ @param starttime The timestamp to start reading values from.
  @param endtime The timestamp to stop reading values from.
  @param ascending Consider the data values in ascending or decending order before applying selection or limits.
  @param limit Maximum number of values to return.
- @param selection
+ @param selection Read selection type
  @param complete The callback when complete.
 
  */

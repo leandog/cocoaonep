@@ -19,7 +19,7 @@
  Create a request to record a list of values
  
  @param rid The resource to write the values to
- @param value Array of EXORpcValues to be recorded
+ @param values Array of EXORpcValues to be recorded
  @param complete Callback when finished
  @return The record request
  */
@@ -29,7 +29,7 @@
  Initialize a request to record a list of values
 
  @param rid The resource to write the values to
- @param value Array of EXORpcValues to be recorded
+ @param values Array of EXORpcValues to be recorded
  @param complete Callback when finished
  @return The record request
  */

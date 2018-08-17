@@ -31,7 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param value The value to write
  @param complete The callback after the value has been written
  
- @return
  */
 + (EXORpcWriteRequest*)writeWithRID:(EXORpcResourceID*)rid string:(NSString*)value complete:(EXORpcRequestComplete)complete;
 
@@ -42,7 +41,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param value The value to write
  @param complete The callback after the value has been written
 
- @return
  */
 + (EXORpcWriteRequest*)writeWithRID:(EXORpcResourceID*)rid number:(NSNumber*)value complete:(EXORpcRequestComplete)complete;
 
@@ -53,7 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param value The value to write
  @param complete The callback after the value has been written
 
- @return
  */
 + (EXORpcWriteRequest*)writeWithRID:(EXORpcResourceID*)rid plist:(id)value complete:(EXORpcRequestComplete)complete;
 
@@ -66,7 +63,6 @@ NS_ASSUME_NONNULL_BEGIN
 
  @warning The `when` property on the EXORpcValue is ignored by write.  Use EXORpcRecord if you want to also set the timestamp.
 
- @return
  */
 + (EXORpcWriteRequest*)writeWithRID:(EXORpcResourceID*)rid value:(EXORpcValue*)value complete:(EXORpcRequestComplete)complete;
 
@@ -77,7 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param value The value to write
  @param complete The callback after the value has been written
 
- @return
  */
 - (instancetype)initWithRID:(EXORpcResourceID*)rid value:(id)value complete:(EXORpcRequestComplete)complete;
 

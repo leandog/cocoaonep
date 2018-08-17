@@ -50,7 +50,7 @@
 /**
  Initialize an deactivate request for a share code or CIK.
 
- @param share YES if the code is a share code, NO if it is a CIK.
+ @param asShare YES if the code is a share code, NO if it is a CIK.
  @param code The code to deactivate
  @param complete The callback to call when the request completes
 
