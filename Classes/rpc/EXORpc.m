@@ -60,9 +60,15 @@ static NSString *EXORpcAPIPath = @"/api:v1/rpc/process";
     if (sessionConfig == nil) {
         sessionConfig = self.sessionConfig;
     }
+
     AFHTTPSessionManager *lsem = [[AFHTTPSessionManager alloc] initWithBaseURL:self.domain sessionConfiguration:sessionConfig];
     lsem.requestSerializer = [AFJSONRequestSerializer serializer];
     lsem.responseSerializer = [AFJSONResponseSerializer serializer];
+
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    securityPolicy.allowInvalidCertificates = YES;
+    [securityPolicy setValidatesDomainName:NO];
+    lsem.securityPolicy = securityPolicy;
 
     return lsem;
 }
